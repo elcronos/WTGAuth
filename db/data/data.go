@@ -11,27 +11,27 @@ import (
  */
  var (
 	 users  	[]User
-	 countries  []Country
+	 countries  	[]Country
 	 cities 	[]City
-	 dbInitialised bool = false
+	 dbInitialised	bool = false
  )
 
 func InitialiseDB(db *gorm.DB) {
 	//Test if there is data in the database
 	checkDatabaseEmpty(db)
 	if dbInitialised {
-		/*
-			COUNTRIES
-	 	*/
-		insertCountries(db)
-		/*
-			SERVICES
-		*/
-		insertCities(db)
-		/*
-			PRODUCTS
-		*/
-		insertUsers(db)
+	/*
+		COUNTRIES
+	 */
+	insertCountries(db)
+	/*
+		SERVICES
+	*/
+	insertCities(db)
+	/*
+		PRODUCTS
+	*/
+	insertUsers(db)
 	}
 }
 
