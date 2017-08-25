@@ -8,7 +8,7 @@ type User struct {
 	Email		string		`gorm:"size:100" json:"email"`
 	Password	string		`json:"password"`
 	Role 		string		`json:"role"`
-	IsActivated string		`json:"activated"`
+	IsActivated 	string		`json:"activated"`
 	CreatedAt	time.Time	`json:"createdAt"`
 	UpdatedAt 	time.Time	`json:"updatedAt"`
 	Country		Country		`gorm:"ForeignKey:Id;AssociationForeignKey:CountryId" json:"country"` //ISO "ALPHA-2 Code"
